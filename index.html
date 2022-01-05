@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yubin's Portfolio Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Yubin Studio</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Demo</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Yubin Studio</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About</h2>
+        <p>
+            <strong></strong>
+            Hello! My name is Yubin Wang. I'  I'm a <strong>VR/game developer</strong> based in Canada <strong>(Calgary)</strong>.
+            <br><br>Stepping into the gaming industry has been my career goal forever as I am a big gamer and trilled to contribute to amazing games. Video games have been an essential connection between my friends, family and my love, so I will be proud to share the moving and joy to others from the game I made.<br><br>
+            I have <strong>6</strong> years of experience in computer science and computer engineering and <strong>3+</strong>years of professional programming experience with Unity. Being a <strong>VR/Unity developer</strong> in my current position for over two years, I provided innovative and technical skills, which helped my company succeed with multifaceted technical solutions across a wide range of software platforms <strong>(14 Projects with over 100,000 revenue)</strong> and really excited to learn more. I am proficient with C# and Unity developing in 3D models. Furthermore, I have experience set up multiplayer in my previous VR project. I also have knowledge of the Android system and API. I also have rich experience in troubleshot hardware and software problems when I was an intern in a company.
+            
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top= value * 0.5 + 'px';
+        })
+
+    </script>
+</body>
+</html>
